@@ -195,55 +195,100 @@
   font-size: 0.9rem;
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-  .product-cards {
-      flex-direction: column;
-  }
+/* Para tablets */
+@media screen and (max-width: 768px) {
+    header {
+        height: 300px;
+    }
 
-  .product-card {
-      margin: 0 0 1rem 0;
-  }
+    h1 {
+        font-size: 4em;
+    }
 
-  .card-container {
-      flex-direction: column;
-  }
+    .platillos-mes h2 {
+        font-size: 2em;
+    }
 
-  .card {
-      flex: 1 1 100%; /* 1 columna */
-  }
+    .menu-items {
+        flex-direction: column;
+        align-items: center;
+    }
 
-  .footer {
-      padding: 1rem 0; /* Ajuste de tamaños para pantallas */
-  }
+    .menu-item {
+        width: 80%;
+        margin-bottom: 2em;
+    }
+
+    /* Adaptación de la barra de navegación */
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-item a {
+        padding: 12px;
+    }
 }
 
-@media (max-width: 576px) {
-  .logo {
-      font-size: 1.5rem;
-  }
+/* Para celular */
+@media screen and (max-width: 480px) {
+    header {
+        height: 200px;
+    }
 
-  .about-section {
-      padding: 1rem;
-  }
+    h1 {
+        font-size: 3em;
+    }
 
-  .explore-title {
-      font-size: 1.5rem;
-  }
+    .platillos-mes h2 {
+        font-size: 1.5em;
+    }
 
-  .card {
-      flex: 1 1 100%; /* esta solo es 1 columna */
-  }
+    .menu-item {
+        width: 90%;
+    }
+
+    .menu-imagen img {
+        max-width: 95%;
+    }
+
+    /* Adaptación de la barra de navegación */
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-item a {
+        padding: 10px;
+    }
 }
 
-.button-details .button_text a {
-  margin-right: 10px;
+/* Para pantallas muy pequeñas */
+@media screen and (max-width: 320px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .platillos-mes h2 {
+        font-size: 1.2em;
+    }
+
+    .menu-item {
+        width: 95%;
+    }
+
+    /* Adaptación de la barra de navegación */
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-item a {
+        padding: 8px;
+        font-size: 0.9em;
+    }
 }
 
-@media (max-width: 700px) {
-  footer .content .link-boxes {
-      flex-wrap: wrap;
-  }
 
   .box {
       width: 80%;
