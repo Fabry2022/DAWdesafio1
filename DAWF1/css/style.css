@@ -4,16 +4,24 @@ body {
     padding: 0;
     background-color: #FFFFFF;
     color: #333;
+}.navbar {
+    background-color: #ec0404;
+    color: white;
+    padding: 10px 0;
 }
+/* Estilos base para la barra de navegación */
 .navbar {
     background-color: #ec0404;
     color: white;
     padding: 10px 0;
 }
+
 .nav-list {
     list-style-type: none;
     display: flex;
     justify-content: center;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-item {
@@ -32,6 +40,32 @@ body {
     background-color: #555;
     border-radius: 5px;
 }
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-item {
+        margin: 10px 0;
+    }
+
+    .nav-item a {
+        padding: 10px 20px;
+        font-size: 20px;
+    }
+}
+
+/* Media Queries para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+    .nav-item a {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+}
+
 
 header {
     background-image: url('../img/sombrero.jpeg');
