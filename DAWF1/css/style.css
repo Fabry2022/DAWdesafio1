@@ -41,31 +41,6 @@ body {
     border-radius: 5px;
 }
 
-/* Media Queries para pantallas más pequeñas */
-@media (max-width: 768px) {
-    .nav-list {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nav-item {
-        margin: 10px 0;
-    }
-
-    .nav-item a {
-        padding: 10px 20px;
-        font-size: 20px;
-    }
-}
-
-/* Media Queries para pantallas muy pequeñas (móviles) */
-@media (max-width: 480px) {
-    .nav-item a {
-        padding: 12px 25px;
-        font-size: 16px;
-    }
-}
-
 
 header {
     background-image: url('../img/sombrero.jpeg');
@@ -273,66 +248,100 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-    .product-cards {
+/* Para tablets */
+@media screen and (max-width: 768px) {
+    header {
+        height: 300px;
+    }
+
+    h1 {
+        font-size: 4em;
+    }
+
+    .platillos-mes h2 {
+        font-size: 2em;
+    }
+
+    .menu-items {
         flex-direction: column;
+        align-items: center;
     }
 
-    .product-card {
-        margin: 0 0 1rem 0;
-    }
-
-    .card-container {
-        flex-direction: column;
-    }
-
-    .card {
-        flex: 1 1 100%; /* 1 columna */
-    }
-
-    .footer {
-        padding: 1rem 0; /* Ajustar el padding para pantallas pequeñas */
-    }
-}
-
-@media (max-width: 576px) {
-    .logo {
-        font-size: 1.5rem;
-    }
-
-    .about-section {
-        padding: 1rem;
-    }
-
-    .explore-title {
-        font-size: 1.5rem;
-    }
-
-    .card {
-        flex: 1 1 100%; /* 1 columna */
-    }
-}
-
-.button-details .button_text a {
-    margin-right: 10px;
-}
-
-@media (max-width: 700px) {
-    footer .content .link-boxes {
-        flex-wrap: wrap;
-    }
-
-    .box {
+    .menu-item {
         width: 80%;
-        margin-top: 10px;
+        margin-bottom: 2em;
     }
 
-    footer .content .link-boxes .input-box {
-        width: 40%;
-        margin-top: 5px;
+    /* Adaptación de la barra de navegación */
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-item a {
+        padding: 12px;
     }
 }
+
+/* Para celular */
+@media screen and (max-width: 480px) {
+    header {
+        height: 200px;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    .platillos-mes h2 {
+        font-size: 1.5em;
+    }
+
+    .menu-item {
+        width: 90%;
+    }
+
+    .menu-imagen img {
+        max-width: 95%;
+    }
+
+    /* Adaptación de la barra de navegación */
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-item a {
+        padding: 10px;
+    }
+}
+
+/* Para pantallas muy pequeñas */
+@media screen and (max-width: 320px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .platillos-mes h2 {
+        font-size: 1.2em;
+    }
+
+    .menu-item {
+        width: 95%;
+    }
+
+    /* Adaptación de la barra de navegación */
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-item a {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+}
+
 
 footer .button-details {
     max-width: 1250px;
